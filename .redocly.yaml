@@ -1,0 +1,25 @@
+organization: testing_redocly
+
+extends:
+  - recommended
+
+apis:
+  core@v2:
+    root: ./v1.yaml
+    rules:
+      no-ambiguous-paths: error
+  external@v1:
+    root: ./v2.yaml
+    labels:
+      - external
+    theme:
+      openapi:
+        hideLogo: true
+
+theme:
+  openapi:
+    schemaExpansionLevel: 2
+    generateCodeSamples:
+      languages:
+        - lang: curl
+        - lang: Python
