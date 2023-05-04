@@ -1,8 +1,5 @@
 organization: testing_redocly
 
-extends:
-  - recommended
-
 apis:
   core@v2:
     root: v1.json
