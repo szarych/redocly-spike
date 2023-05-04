@@ -1,17 +1,3 @@
-# See https://redocly.com/docs/cli/configuration/ for more information.
-apis:
-  foo@v1:
-    root: "openapi/foo.yaml"
-lint:
-  rules:
-    no-unused-schemas: warning
-features.openapi:
-  htmlTemplate: ./docs/index.html
-  theme:
-    colors:
-      primary: "#32329f"
-The root openapi.yaml file looks like this:
-
 openapi: 3.0.3
 info:
   version: 1.0.0
@@ -44,10 +30,10 @@ servers:
   - url: 'http://example.com/api/v1'
   - url: 'https://example.com/api/v1'
 paths:
-  '/users/{username}':
-    $ref: 'paths/users@{username}.yaml'
+  /users:
+    $ref: 'v1.yaml'
   /echo:
-    $ref: paths/echo.yaml
+    $ref: v2.yaml
 components:
   securitySchemes:
     main_auth:
