@@ -5,11 +5,11 @@ extends:
 
 apis:
   core@v2:
-    root: ./v1.yaml
+    root: v1.json
     rules:
       no-ambiguous-paths: error
   external@v1:
-    root: ./v2.yaml
+    root: v2.json
     labels:
       - external
     theme:
